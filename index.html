@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible">
+        <title>Javascript Quiz</title>
+        <meta name="description" content="A timed quiz that tests the user's knowledge of fundamental Javascript concepts.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./assets/css/reset.css">
+        <link rel="stylesheet" href="./assets/css/layout.css">
+        <link rel="stylesheet" href="./assets/css/variables.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="stylesheet" href="./assets/css/anims.css">
+        <link rel="stylesheet" href="./assets/css/queries.css">
+        <script src="./assets/scripts/dom.js" defer></script>
+        <script src="./assets/scripts/questions.js" defer></script>
+        <script src="./assets/scripts/scores.js" defer></script>
+    </head>
+
+    <body>
+        <div class="body-container">
+            <header class="body-item" id="header">
+                <div class="header-container">
+                    <h1 class="heading" id="heading">The <img class="logo" src="./assets/icons/javascript.svg"> Quiz</h1>
+                    <img class="emoji" id="emoji" src="./assets/icons/emojis/salute.svg">
+                    <h2 class="quiz-info" id="score">Score: <span class="quiz-output" id="score-output">0</span></h2>
+                    <h2 class="quiz-info" id="time">Time: <span class="quiz-output" id="time-output">60</span></h2>    
+                </div>
+            </header>
+
+            <main class="body-item" id="main">
+                <div class="main-container">
+                    <p class="question" id="question">This timed quiz will test your knowledge of fundamental <span id="blank-space">Javascript</span> concepts.</p>
+                    <button class="answer-btn" id="answer-one">Answer One</button>
+                    <button class="answer-btn" id="answer-two">Answer Two</button>
+                    <button class="answer-btn" id="answer-three">Answer Three</button>
+                    <button class="answer-btn" id="answer-four">Answer Four</button>
+                    <button class="next-btn" id="next-btn">Start Quiz!</button>
+                    <h3 class="result" id="result"></h3>
+                </div>
+            </main>
+
+            <footer class="body-item" id="footer">
+                <div class="footer-container">
+                    <a id="documentation" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Having Trouble?</a>
+                    <a id="scoreboard">View Scores</a>
+                </div>
+            </footer>
+        </div>
+    </body>
+
+</html>

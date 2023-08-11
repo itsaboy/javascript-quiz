@@ -1,0 +1,23 @@
+/* ==========================================================================
+   Custom Variables
+========================================================================== */
+
+:root {
+
+    /* Font Sizes */
+
+    --largest-txt: clamp(3rem, 5vh + 1rem, 10rem);
+    --large-txt: clamp(1rem, 2.5vw + 1rem, 2rem);
+    --normal-txt: clamp(1rem, 2vw + 1rem, 2rem);
+    --small-txt: clamp(0.75rem, 0.5vh + 1rem, 2rem);
+
+}
+
+/* ==========================================================================
+   Custom Fonts
+========================================================================== */
+
+@font-face {
+    font-family: Ubuntu;
+    src: url('../fonts/Ubuntu-Regular.ttf');
+}

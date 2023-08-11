@@ -1,0 +1,143 @@
+/* ==========================================================================
+   Body Grid Container
+========================================================================== */
+
+.body-container {
+    display: grid;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+    grid-template-rows: 2fr 7fr 1fr;
+    grid-template-columns: 1fr;
+    height: 100vh;
+    gap: 3rem; 
+}
+
+/* Body Grid Item IDs */
+
+#header {
+    grid-area: header;
+}
+
+#main {
+    grid-area: main;
+}
+
+#footer {
+    grid-area: footer;
+}
+
+/* ==========================================================================
+   Header Grid Container
+========================================================================== */
+
+.header-container {
+    display: grid;
+    grid-template-areas:
+    "heading emoji score time";
+    grid-template-rows: 1fr;
+    grid-template-columns: 4fr 1fr repeat(2, 2fr);
+    height: 100%;
+    place-items: center;
+    text-align: center;
+}
+
+/* Header Grid Item IDs */
+
+#heading {
+    grid-area: heading;
+}
+
+#emoji {
+    grid-area: emoji;
+}
+
+#results {
+    grid-area: results;
+}
+
+/* Heading Flex Container
+========================================================================== */
+
+.heading-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+
+/* Results Flex Container
+========================================================================== */
+
+.results-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+/* ==========================================================================
+   Main Grid Container
+========================================================================== */
+
+.main-container {
+    display: grid;
+    grid-template-areas:
+    "question question"
+    "answer-one answer-two"
+    "answer-three answer-four"
+    "next-btn next-btn"
+    "result result";
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+    width: 75%;
+    margin: 0 auto;
+    place-items: center;
+    text-align: center;
+}
+
+/* Main Grid Item IDs */
+
+#question {
+    grid-area: question;
+}
+
+#question-one {
+    grid-area: question-one
+}
+
+#question-two {
+    grid-area: question-two
+}
+
+#question-three {
+    grid-area: question-three
+}
+
+#question-four {
+    grid-area: question-four
+}
+
+#next-btn {
+    grid-area: next-btn;
+}
+
+#result {
+    grid-area: result;
+}
+
+/* ==========================================================================
+   Footer Grid Container
+========================================================================== */
+
+.footer-container {
+    display: grid;
+    grid-template-areas:
+    "documentation scoreboard";
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+    place-items: center;
+    text-align: center;
+}

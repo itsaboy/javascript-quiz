@@ -1,0 +1,17 @@
+/* ==========================================================================
+   Screen Length Below 904px
+========================================================================== */
+
+@media only screen and (max-width: 940px) {
+
+    /* Header Grid Container */
+
+    .header-container {
+        grid-template-areas:
+        "heading heading heading"
+        "score emoji time";
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
