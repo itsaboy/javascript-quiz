@@ -1,8 +1,8 @@
 /* ==========================================================================
-   Screen Length Below 904px
+   Screen Width Below 1110px
 ========================================================================== */
 
-@media only screen and (max-width: 940px) {
+@media only screen and (max-width: 1110px) {
 
     /* Header Grid Container */
 
@@ -12,6 +12,48 @@
         "score emoji time";
         grid-template-rows: repeat(2, 1fr);
         grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+/* ==========================================================================
+   Screen Width Below 768px
+========================================================================== */
+
+@media only screen and (max-width: 768px) {
+
+    /* Main Grid Container */
+
+    .main-container {
+        grid-template-areas:
+        "question"
+        "next-btn"
+        "answer-one"
+        "answer-two"
+        "answer-three"
+        "answer-four"
+        "result";
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* ==========================================================================
+   Screen Width Below 576px
+========================================================================== */
+
+@media only screen and (max-width: 768px) {
+
+    /* Header Grid Container */
+
+    .header-container {
+        grid-template-areas:
+        "heading heading"
+        "emoji emoji"
+        "score time";
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
 }

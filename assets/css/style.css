@@ -13,8 +13,9 @@
 
 /* Heading */
 
-.heading, .quiz-info {
-   font-size: var(--large-txt);
+.heading {
+   font-size: var(--largest-txt);
+   padding: 1rem;
 }
 
 .logo {
@@ -24,38 +25,51 @@
 /* Emoji */
 
 .emoji {
-    height: clamp(100px, 10vh + 1rem, 750px);
+   height: clamp(100px, 10vh + 1rem, 750px);
 }
 
-/* Score */
+/* Score & Time Remaining */
 
-
-
-/* Time */
+.quiz-output {
+   font-size: var(--normal-txt);
+}
 
 /* ==========================================================================
    Main
 ========================================================================== */
 
-/* Question */
+/* Questions */
 
 .question {
    font-size: var(--normal-txt);
+   padding: 1rem;
+}
+
+.colored-text {
+   color: red;
 }
 
 /* Answer Buttons */
 
 .answer-btn {
-    width: 75%;
-    height: 75%;
-    visibility: hidden;
+   width: 75%;
+   height: 75%;
+   font-size: var(--normal-txt);
+   display: none;
 }
 
 /* Next Button */
 
 .next-btn {
-   width: 25%;
-   height: 50%;
+   width: clamp( 100px, 75%, 300px);
+   height: clamp( 50px, 25%, 150px);
+}
+
+/* Result Output */
+
+.result {
+   display: none;
+   font-size: var(--large-txt);
 }
 
 /* ==========================================================================

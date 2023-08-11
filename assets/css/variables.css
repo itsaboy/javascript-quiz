@@ -6,9 +6,9 @@
 
     /* Font Sizes */
 
-    --largest-txt: clamp(3rem, 5vh + 1rem, 10rem);
+    --largest-txt: clamp(1rem, 3vw + 1rem, 5rem);
     --large-txt: clamp(1rem, 2.5vw + 1rem, 2rem);
-    --normal-txt: clamp(1rem, 2vw + 1rem, 2rem);
+    --normal-txt: clamp(0.8rem, 1.75vw + 1rem, 1.5rem);
     --small-txt: clamp(0.75rem, 0.5vh + 1rem, 2rem);
 
 }

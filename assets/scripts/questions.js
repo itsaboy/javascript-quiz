@@ -1,22 +1,7 @@
-let timer = 60;
-let score = 0;
-let paused = true;
-let activeQuestion = "none";
-let correctAnswer = "none";
-
-const countdown = () => {
-    if (paused === false) {
-        timer--;
-        timeLeft.innerText = `${timer}`;
-    } else {
-        timeLeft.innerText = `${timer}`;
-    };
-};
-
 const rightAnswer = () => {
     correctAnswer = "none";
     emoji.src = happy;
-    answerResult.style.visibility = "visible";
+    answerResult.style.display = "block";
     answerResult.innerText = "Correct!";
     score = score + 10;
     currentScore.innerText = `${score}`;
@@ -28,7 +13,7 @@ const rightAnswer = () => {
 const wrongAnswer = () => {
     correctAnswer = "none";
     emoji.src = sad;
-    answerResult.style.visibility = "visible";
+    answerResult.style.display = "block";
     answerResult.innerText = "Incorrect...";
     timer = timer - 10;
     timeLeft.innerText = `${timer}`;
@@ -45,10 +30,10 @@ const startQuiz = () => {
     answerThree.addEventListener('click', answerThreeClicked);
     answerFour.addEventListener('click', answerFourClicked);
     setInterval(countdown, 1000);
-    answerOne.style.visibility = 'visible';
-    answerTwo.style.visibility = 'visible';
-    answerThree.style.visibility = 'visible';
-    answerFour.style.visibility = 'visible';
+    answerOne.style.display = 'block';
+    answerTwo.style.display = 'block';
+    answerThree.style.display = 'block';
+    answerFour.style.display = 'block';
     nextQuestion();
 };
 
@@ -99,48 +84,48 @@ const answerFourClicked = () => {
 const questionOne = () => {
     activeQuestion = "Question One";
     paused = false;
-    correctAnswer = "A";
-    currentQuestion.innerText = "Question One";
-    answerOne.innerText = "Answer One";
-    answerTwo.innerText = "Answer Two";
-    answerThree.innerText = "Answer Three";
-    answerFour.innerText = "Answer Four";
+    correctAnswer = "B";
+    currentQuestion.innerText = "Which of the following is not a primitive?";
+    answerOne.innerText = "String";
+    answerTwo.innerText = "Object";
+    answerThree.innerText = "Boolean";
+    answerFour.innerText = "All of the Above";
     nextButton.style.visibility = "hidden";
 };
 
 const questionTwo = () => {
     activeQuestion = "Question Two";
     paused = false;
-    correctAnswer = "B";
-    currentQuestion.innerText = "Question Two";
-    answerOne.innerText = "Answer One";
-    answerTwo.innerText = "Answer Two";
-    answerThree.innerText = "Answer Three";
-    answerFour.innerText = "Answer Four";
+    correctAnswer = "A";
+    currentQuestion.innerText = "Which of the following denotes an array?";
+    answerOne.innerText = "[ ]";
+    answerTwo.innerText = "( )";
+    answerThree.innerText = "{ }";
+    answerFour.innerText = "' '";
     nextButton.style.visibility = "hidden";
 };
 
 const questionThree = () => {
     activeQuestion = "Question Three";
     paused = false;
-    correctAnswer = "C";
-    currentQuestion.innerText = "Question Three";
-    answerOne.innerText = "Answer One";
-    answerTwo.innerText = "Answer Two";
-    answerThree.innerText = "Answer Three";
-    answerFour.innerText = "Answer Four";
+    correctAnswer = "D";
+    currentQuestion.innerText = "Which of the following declares a variable?";
+    answerOne.innerText = "let";
+    answerTwo.innerText = "const";
+    answerThree.innerText = "var";
+    answerFour.innerText = "All of the Above";
     nextButton.style.visibility = "hidden";
 };
 
 const questionFour = () => {
     activeQuestion = "Question Four";
     paused = false;
-    correctAnswer = "D";
-    currentQuestion.innerText = "Question Four";
-    answerOne.innerText = "Answer One";
-    answerTwo.innerText = "Answer Two";
-    answerThree.innerText = "Answer Three";
-    answerFour.innerText = "Answer Four";
+    correctAnswer = "C";
+    currentQuestion.innerText = "What will console.log(1.0 + '2.2'); output?";
+    answerOne.innerText = "1.02.2";
+    answerTwo.innerText = "3.2";
+    answerThree.innerText = "12.2";
+    answerFour.innerText = "1.2.2";
     nextButton.style.visibility = "hidden";
 };
 
@@ -148,71 +133,71 @@ const questionFive = () => {
     activeQuestion = "Question Five";
     paused = false;
     correctAnswer = "A";
-    currentQuestion.innerText = "Question Five";
-    answerOne.innerText = "Answer One";
-    answerTwo.innerText = "Answer Two";
-    answerThree.innerText = "Answer Three";
-    answerFour.innerText = "Answer Four";
+    currentQuestion.innerText = "Which of the following operands checks for strict equality?";
+    answerOne.innerText = "===";
+    answerTwo.innerText = "==";
+    answerThree.innerText = "!==";
+    answerFour.innerText = "!=";
     nextButton.style.visibility = "hidden";
 };
 
 const questionSix = () => {
     activeQuestion = "Question Six";
     paused = false;
-    correctAnswer = "B";
-    currentQuestion.innerText = "Question Six";
-    answerOne.innerText = "Answer One";
-    answerTwo.innerText = "Answer Two";
-    answerThree.innerText = "Answer Three";
-    answerFour.innerText = "Answer Four";
+    correctAnswer = "D";
+    currentQuestion.innerText = "Which of the following variable names follows the correct naming convention?";
+    answerOne.innerText = "new-variable";
+    answerTwo.innerText = "newvariable";
+    answerThree.innerText = "new_variable";
+    answerFour.innerText = "newVariable";
     nextButton.style.visibility = "hidden";
 };
 
 const questionSeven = () => {
     activeQuestion = "Question Seven";
     paused = false;
-    correctAnswer = "C";
-    currentQuestion.innerText = "Question Seven";
-    answerOne.innerText = "Answer One";
-    answerTwo.innerText = "Answer Two";
-    answerThree.innerText = "Answer Three";
-    answerFour.innerText = "Answer Four";
+    correctAnswer = "B";
+    currentQuestion.innerText = "What will console.log(0 == true); output?";
+    answerOne.innerText = "0 == true";
+    answerTwo.innerText = "false";
+    answerThree.innerText = "true";
+    answerFour.innerText = "0";
     nextButton.style.visibility = "hidden";
 };
 
 const questionEight = () => {
     activeQuestion = "Question Eight";
     paused = false;
-    correctAnswer = "D";
-    currentQuestion.innerText = "Question Eight";
-    answerOne.innerText = "Answer One";
-    answerTwo.innerText = "Answer Two";
-    answerThree.innerText = "Answer Three";
-    answerFour.innerText = "Answer Four";
+    correctAnswer = "C";
+    currentQuestion.innerText = "Which of the following is the correct way to check the equality of 3 variables?";
+    answerOne.innerText = "(X == Y) & (Y == Z)";
+    answerTwo.innerText = "X = Y = Z";
+    answerThree.innerText = "(X == Y) && (Y == Z)";
+    answerFour.innerText = "(X != Y) && (Y != Z)";
     nextButton.style.visibility = "hidden";
 };
 
 const questionNine = () => {
     activeQuestion = "Question Nine";
     paused = false;
-    correctAnswer = "A";
-    currentQuestion.innerText = "Question Nine";
-    answerOne.innerText = "Answer One";
-    answerTwo.innerText = "Answer Two";
-    answerThree.innerText = "Answer Three";
-    answerFour.innerText = "Answer Four";
+    correctAnswer = "C";
+    currentQuestion.innerText = "Which of the following is the equivalent to 'My name is ' + name + '!'?";
+    answerOne.innerText = "'My name is ' + name!";
+    answerTwo.innerText = "'My' 'name' 'is' 'name!'";
+    answerThree.innerText = "`My name is ${name}!`";
+    answerFour.innerText = "None of the Above";
     nextButton.style.visibility = "hidden";
 };
 
 const questionTen = () => {
     activeQuestion = "Question Ten";
     paused = false;
-    correctAnswer = "B";
-    currentQuestion.innerText = "Question Ten";
-    answerOne.innerText = "Answer One";
-    answerTwo.innerText = "Answer Two";
-    answerThree.innerText = "Answer Three";
-    answerFour.innerText = "Answer Four";
+    correctAnswer = "A";
+    currentQuestion.innerText = "Which of the following is a numeric data type?";
+    answerOne.innerText = "NaN";
+    answerTwo.innerText = "null";
+    answerThree.innerText = "undefined";
+    answerFour.innerText = "None of the Above";
     nextButton.style.visibility = "hidden";
 };
 
@@ -222,7 +207,7 @@ const resultsScreen = () => {
 
 const nextQuestion = () => {
     emoji.src = thinking;
-    answerResult.style.visibility = "hidden";
+    answerResult.style.display = "none";
     if (activeQuestion === "none") {
         questionOne();
     } else if (activeQuestion === "Question One") {

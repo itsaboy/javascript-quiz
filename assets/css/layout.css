@@ -8,7 +8,7 @@
     "header"
     "main"
     "footer";
-    grid-template-rows: 2fr 7fr 1fr;
+    grid-template-rows: 15rem 3fr 10rem;
     grid-template-columns: 1fr;
     height: 100vh;
     gap: 3rem; 
@@ -84,9 +84,9 @@
     display: grid;
     grid-template-areas:
     "question question"
+    "next-btn next-btn"
     "answer-one answer-two"
     "answer-three answer-four"
-    "next-btn next-btn"
     "result result";
     grid-template-rows: repeat(5, 1fr);
     grid-template-columns: repeat(2, 1fr);
