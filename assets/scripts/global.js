@@ -33,3 +33,9 @@ const countdown = () => {
         postQuiz();
     };
 };
+
+// Refresh page
+
+const refresh = () => {
+    location.reload();
+};

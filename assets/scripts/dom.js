@@ -109,29 +109,51 @@ const userScoreOutput = document.createElement('h3');
 userScoreOutput.setAttribute('class', 'high-scores-output');
 userScoreOutput.setAttribute('id', 'high-score-output');
 
+//// Footer DOM Elements ////
+
+const footerContainer = document.getElementById('footer-container');
+
+const viewScores = document.createElement('a');
+viewScores.setAttribute('class', 'internal-link');
+viewScores.setAttribute('id', 'scoreboard');
+viewScores.innerText = 'View Scores';
+
+const tryAgain = document.createElement('a');
+tryAgain.setAttribute('class', 'internal-link');
+tryAgain.setAttribute('id', 'try-again');
+tryAgain.innerText = 'Try Again';
+
 //// Functions that append the DOM ////
 
 const preQuiz = () => {
     resetGlobals();
+    emoji.src = salute;
+
     // Clears the DOM 
     main.querySelectorAll('*').forEach(e => e.remove());
+    tryAgain.remove();
+    userNameOutput.innerText = '';
+    userScoreOutput.innerText = '';
 
     // Appends created DOM elements
     main.append(infoContainer);
     infoContainer.append(infoParagraph);
     infoContainer.append(startQuizButton);
+    footerContainer.append(viewScores);
 
-    // Adds event listener to button
+    // Adds event listener to button and link
     startQuizButton.addEventListener('click', duringQuiz);
-
+    viewScores.addEventListener('click', highScores);
 };
 
 const duringQuiz = () => {
     // Clears the DOM
     main.querySelectorAll('*').forEach(e => e.remove());
+    viewScores.remove();
 
-    // Removes startQuizButton event listener from memory
+    // Removes button and link event listener from memory
     startQuizButton.removeEventListener('click', duringQuiz);
+    viewScores.removeEventListener('click', highScores);
 
     // Appends created DOM elements
     main.append(quizContainer);
@@ -168,17 +190,24 @@ const postQuiz = () => {
     answerThree.removeEventListener('click', answerThreeClicked);
     answerFour.removeEventListener('click', answerFourClicked);
 
+    // Emoji image source
+    if (finalScore >= 80) {
+        emoji.src = happy;
+    } else if (finalScore < 80) {
+        emoji.src = sad;
+    };
+
     // Appends created DOM elements
     main.append(finalResultContainer);
     finalResultContainer.append(resultsParagraph);
     finalResultContainer.append(userNameInput);
     finalResultContainer.append(submitScoreButton);
-
+    
     resultsParagraph.innerHTML = `
     You answered <span class="colored-text"> ${score / 10} </span> out of 10 questions correctly. 
     With <span class="colored-text"> ${timer} </span> seconds left on the clock, your final score is:
     <span class="colored-text"> ${finalScore} </span>!
-`;
+    `;
 
     // Adds event listener to button
     submitScoreButton.addEventListener('click', pushNewScore);
@@ -187,26 +216,25 @@ const postQuiz = () => {
 const highScores = () => {
     // Clears the DOM
     main.querySelectorAll('*').forEach(e => e.remove());
+    viewScores.remove();
 
     // Removes event listeners from memory
-    submitScoreButton.addEventListener('click', pushNewScore);
-    submitScoreButton.addEventListener('click', highScores);
+    submitScoreButton.removeEventListener('click', pushNewScore);
+    viewScores.removeEventListener('click', highScores);
 
     // Appends created DOM elements
     main.append(highScoresContainer);
     highScoresContainer.append(highScoresHeading);
     highScoresContainer.append(userNameHeading);
     highScoresContainer.append(userScoreHeading);
-    highScoresContainer.append(userScoreHeading);
     highScoresContainer.append(userNameOutput);
     highScoresContainer.append(userScoreOutput);
+    footerContainer.append(tryAgain);
+
+    // Adds event listener to link
+    tryAgain.addEventListener('click', refresh);
 
     loadScores();
 }
 
 preQuiz();
-
-//// Footer DOM Elements ////
-
-const viewScores = document.getElementById('scoreboard');
-viewScores.addEventListener('click', highScores);
