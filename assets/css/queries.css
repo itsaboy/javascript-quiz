@@ -22,9 +22,9 @@
 
 @media only screen and (max-width: 768px) {
 
-    /* Main Grid Container */
+    /* Quiz Grid Container */
 
-    .main-container {
+    .quiz-container {
         grid-template-areas:
         "question"
         "next-btn"
@@ -43,7 +43,7 @@
    Screen Width Below 576px
 ========================================================================== */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 576px) {
 
     /* Header Grid Container */
 
@@ -55,5 +55,15 @@
         grid-template-rows: repeat(3, 1fr);
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .heading {
+        padding: 0.25rem;
+     }
+
+     /* Footer Grid Container */
+
+     .footer-container {
+        font-size: var(--small-txt);
+     }
 
 }

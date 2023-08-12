@@ -7,11 +7,22 @@
    line-height: 3rem;
 }
 
+/* Body */
+
+body {
+   background-color: var(--main-bg-color);
+}
+
 /* ==========================================================================
    Header
 ========================================================================== */
 
 /* Heading */
+
+.header-container {
+   background-color: var(--second-bg-color);
+   color: var(--second-txt-color);
+}
 
 .heading {
    font-size: var(--largest-txt);
@@ -32,6 +43,12 @@
 
 .quiz-output {
    font-size: var(--normal-txt);
+   color: var(--main-bg-color);
+}
+
+.quiz-output-colored {
+   font-size: var(--large-txt);
+   color: var(--second-txt-color);
 }
 
 /* ==========================================================================
@@ -40,13 +57,15 @@
 
 /* Questions */
 
-.question {
+.text {
    font-size: var(--normal-txt);
+   color: var(--main-txt-color);
    padding: 1rem;
 }
 
 .colored-text {
-   color: red;
+   font-size: var(--large-txt);
+   color: var(--colored-txt-color);
 }
 
 /* Answer Buttons */
@@ -55,7 +74,10 @@
    width: 75%;
    height: 75%;
    font-size: var(--normal-txt);
-   display: none;
+   border-right: solid var(--second-txt-color) 0.5rem;
+   border-bottom: solid var(--second-txt-color) 0.5rem;
+   border-radius: 0.75rem;
+   box-shadow: var(--shadow);
 }
 
 /* Next Button */
@@ -63,19 +85,56 @@
 .next-btn {
    width: clamp( 100px, 75%, 300px);
    height: clamp( 50px, 25%, 150px);
+   font-size: var(--normal-txt);
+   border-right: solid var(--main-txt-color) 0.10rem;
+   border-bottom: solid var(--main-txt-color) 0.10rem; 
+   background-color: var(--second-txt-color);
+   color: var(--main-txt-color);
 }
 
 /* Result Output */
 
 .result {
-   display: none;
    font-size: var(--large-txt);
+   color: var(--colored-txt-color);
+}
+
+/* Username Input */
+
+.name-input {
+   font-size: var(--large-txt);
+   color: var(--second-txt-color);
+   text-align: center;
+   width: clamp( 100px, 75%, 300px);
+   height: clamp( 50px, 25%, 150px);
+}
+
+/* High Scores */
+
+.high-scores-heading {
+   color: var(--main-txt-color);
+   font-size: var(--largest-txt);
+}
+
+.high-scores-sub-heading {
+   color: var(--second-txt-color);
+   font-size: var(--large-txt);
+   text-decoration: underline;
+   margin: 0 0.25rem;
+}
+
+.high-scores-output {
+   color: var(--colored-txt-color);
+   font-size: var(--large-txt);
+   place-self: start center;
 }
 
 /* ==========================================================================
    Footer
 ========================================================================== */
 
-/* Documentation */
-
-/* View Scores */
+.footer-container {
+   font-size: var(--normal-txt);
+   background-color: var(--second-bg-color);
+   color: var(--second-txt-color);
+}

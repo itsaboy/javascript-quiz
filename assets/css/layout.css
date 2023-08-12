@@ -8,7 +8,7 @@
     "header"
     "main"
     "footer";
-    grid-template-rows: 15rem 3fr 10rem;
+    grid-template-rows: 2fr 7fr 1fr;
     grid-template-columns: 1fr;
     height: 100vh;
     gap: 3rem; 
@@ -28,19 +28,22 @@
     grid-area: footer;
 }
 
+.body-item div{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    text-align: center;
+}
+
 /* ==========================================================================
    Header Grid Container
 ========================================================================== */
 
-.header-container {
-    display: grid;
+.header-container {   
     grid-template-areas:
     "heading emoji score time";
     grid-template-rows: 1fr;
     grid-template-columns: 4fr 1fr repeat(2, 2fr);
-    height: 100%;
-    place-items: center;
-    text-align: center;
 }
 
 /* Header Grid Item IDs */
@@ -53,8 +56,12 @@
     grid-area: emoji;
 }
 
-#results {
-    grid-area: results;
+#score {
+    grid-area: score;
+}
+
+#time {
+    grid-area: time;
 }
 
 /* Heading Flex Container
@@ -77,11 +84,40 @@
 }
 
 /* ==========================================================================
-   Main Grid Container
+   Main Grid Containers
 ========================================================================== */
 
 .main-container {
     display: grid;
+    width: 75%;
+    margin: 0 auto;
+}
+
+/* Info Grid Container
+========================================================================== */
+
+.info-container {   
+    grid-template-areas:
+    "info-paragraph"
+    "start-quiz-btn";
+    grid-template-rows: 4fr 1fr;
+    grid-template-columns: 1fr;
+}
+
+/* Info Grid Item IDs */
+
+#info-paragraph {
+    grid-area: info-paragraph;
+}
+
+#start-quiz-btn {
+    grid-area: start-quiz-btn;
+}
+
+/* Quiz Grid Container
+========================================================================== */
+
+.quiz-container {
     grid-template-areas:
     "question question"
     "next-btn next-btn"
@@ -90,14 +126,9 @@
     "result result";
     grid-template-rows: repeat(5, 1fr);
     grid-template-columns: repeat(2, 1fr);
-    height: 100%;
-    width: 75%;
-    margin: 0 auto;
-    place-items: center;
-    text-align: center;
 }
 
-/* Main Grid Item IDs */
+/* Quiz Grid Item IDs */
 
 #question {
     grid-area: question;
@@ -127,17 +158,85 @@
     grid-area: result;
 }
 
+/* Result Grid Container
+========================================================================== */
+
+.result-container {
+    grid-template-areas:
+    "final-result"
+    "name-input"
+    "submit-btn";
+    grid-template-rows: 3fr repeat(2, 1fr);
+    grid-template-columns: 1fr;
+}
+
+/* Result Grid Item IDs */
+
+#final-result {
+    grid-area: final-result;
+}
+
+#name-input {
+    grid-area: name-input;
+}
+
+#submit-btn {
+    grid-area: submit-btn;
+}
+
+/* High Scores Grid Container
+========================================================================== */
+
+.scores-container {
+    grid-template-areas:
+    "high-scores-heading high-scores-heading"
+    "high-scores-name high-scores-result"
+    "user-name-output high-score-output";
+    grid-template-rows: 2fr 1fr 7fr;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* High Scores Grid Item IDs */
+
+#high-scores-heading {
+    grid-area: high-scores-heading;
+}
+
+#high-scores-name {
+    grid-area: high-scores-name;
+}
+
+#high-scores-result {
+    grid-area: high-scores-result;
+}
+
+#user-name-output {
+    grid-area: user-name-output;
+    display: flex;
+}
+
+#high-score-output {
+    grid-area: high-score-output;
+    display: flex;
+}
+
 /* ==========================================================================
    Footer Grid Container
 ========================================================================== */
 
 .footer-container {
-    display: grid;
     grid-template-areas:
     "documentation scoreboard";
     grid-template-rows: 1fr;
     grid-template-columns: repeat(2, 1fr);
-    height: 100%;
-    place-items: center;
-    text-align: center;
+}
+
+/* Footer Grid Item IDs */
+
+#documentation {
+    grid-area: documentation;
+}
+
+#scoreboard {
+    grid-area: scoreboard
 }

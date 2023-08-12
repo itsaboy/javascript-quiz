@@ -14,10 +14,11 @@
         <link rel="stylesheet" href="./assets/css/style.css">
         <link rel="stylesheet" href="./assets/css/anims.css">
         <link rel="stylesheet" href="./assets/css/queries.css">
+        <script src="./assets/scripts/scores.js" defer></script>
         <script src="./assets/scripts/global.js" defer></script>
         <script src="./assets/scripts/dom.js" defer></script>
+        <script src="./assets/scripts/user.js" defer></script>
         <script src="./assets/scripts/questions.js" defer></script>
-        <script src="./assets/scripts/scores.js" defer></script>
     </head>
 
     <body>
@@ -26,21 +27,13 @@
                 <div class="header-container">
                     <h1 class="heading" id="heading">The <img class="logo" src="./assets/icons/javascript.svg"> Quiz</h1>
                     <img class="emoji" id="emoji" src="./assets/icons/emojis/salute.svg">
-                    <h2 class="quiz-output" id="score">Score: <span class="quiz-output" id="score-output">0</span></h2>
-                    <h2 class="quiz-output" id="time">Time: <span class="quiz-output" id="time-output">60</span></h2>    
+                    <h2 class="quiz-output" id="score">Score: <span class="quiz-output-colored" id="score-output">0</span></h2>
+                    <h2 class="quiz-output" id="time">Time: <span class="quiz-output-colored" id="time-output">0</span></h2>    
                 </div>
             </header>
 
             <main class="body-item" id="main">
-                <div class="main-container">
-                    <p class="question" id="question">This timed quiz will test your knowledge of fundamental Javascript concepts. You have <span class="colored-text">60</span> seconds to answer up to <span class="colored-text">10</span> questions. Each correct answer will add <span class="colored-text">10</span> points to your score. An incorrect answer will subtract <span class="colored-text">10</span> seconds from your time remaining.</p>
-                    <button class="next-btn" id="next-btn">Start Quiz!</button>
-                    <button class="answer-btn" id="answer-one">Answer One</button>
-                    <button class="answer-btn" id="answer-two">Answer Two</button>
-                    <button class="answer-btn" id="answer-three">Answer Three</button>
-                    <button class="answer-btn" id="answer-four">Answer Four</button>
-                    <h3 class="result" id="result"></h3>
-                </div>
+
             </main>
 
             <footer class="body-item" id="footer">

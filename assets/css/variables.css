@@ -11,6 +11,30 @@
     --normal-txt: clamp(0.8rem, 1.75vw + 1rem, 1.5rem);
     --small-txt: clamp(0.75rem, 0.5vh + 1rem, 2rem);
 
+    /* Background Colors */
+
+    --main-bg-color: rgb(85, 85, 136);
+    --second-bg-color: rgb(225, 225, 225);
+
+    /* Text Colors */
+    
+    --main-txt-color: rgb(250, 250, 250);
+    --second-txt-color: rgb(37, 37, 59);
+    --colored-txt-color: rgb(252, 234, 43);
+
+    /* Box Shadow */
+
+    --shadow-color: 0deg 0% 0%;
+    --shadow: 
+    0.3px 0.2px 0.3px hsl(var(--shadow-color) / 0.11),
+    0.8px 0.7px 1px -0.5px hsl(var(--shadow-color) / 0.1),
+    1.5px 1.4px 1.9px -1.1px hsl(var(--shadow-color) / 0.09),
+    2.7px 2.5px 3.4px -1.6px hsl(var(--shadow-color) / 0.08),
+    4.8px 4.5px 6.2px -2.1px hsl(var(--shadow-color) / 0.07),
+    8.2px 7.6px 10.5px -2.7px hsl(var(--shadow-color) / 0.07),
+    13.1px 12.2px 16.8px -3.2px hsl(var(--shadow-color) / 0.06),
+    20px 18.5px 25.5px -3.7px hsl(var(--shadow-color) / 0.05);
+
 }
 
 /* ==========================================================================
