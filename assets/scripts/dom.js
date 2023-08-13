@@ -1,9 +1,9 @@
 //////// Emoji Source Paths ////////
 
-const thinking = "../assets/icons/emojis/thinking.svg";
-const happy = "../assets/icons/emojis/happy.svg";
-const sad = "../assets/icons/emojis/sad.svg";
-const salute = "../assets/icons/emojis/salute.svg";
+const thinking = "./assets/icons/emojis/thinking.svg";
+const happy = "./assets/icons/emojis/happy.svg";
+const sad = "./assets/icons/emojis/sad.svg";
+const salute = "./assets/icons/emojis/salute.svg";
 
 //////// Header DOM Elements ////////
 
