@@ -1,17 +1,17 @@
-//// Emoji Source Paths ////
+//////// Emoji Source Paths ////////
 
 const thinking = "../assets/icons/emojis/thinking.svg";
 const happy = "../assets/icons/emojis/happy.svg";
 const sad = "../assets/icons/emojis/sad.svg";
 const salute = "../assets/icons/emojis/salute.svg";
 
-//// Header DOM Elements ////
+//////// Header DOM Elements ////////
 
 const emoji =  document.getElementById('emoji');
 const currentScore = document.getElementById('score-output');
 const timeLeft = document.getElementById('time-output');
 
-//// Main DOM elements ////
+//////// Main DOM elements ////////
 
 const main = document.getElementById('main');
 
@@ -24,11 +24,11 @@ infoParagraph.setAttribute('class', 'text');
 infoParagraph.setAttribute('id', 'info-paragraph');
 infoParagraph.innerHTML = `
 This timed quiz will test your knowledge of fundamental Javascript concepts. You have <span class="colored-text">60</span> seconds to answer up to <span class="colored-text">10</span> questions. Each correct answer will add <span class="colored-text">10</span> points to your score. An incorrect answer will subtract <span class="colored-text">10</span> seconds from your time remaining. When the quiz is finished, your time remaining will be added to your score for a <span class="colored-text">Final Result</span>!
-`;
+`; // note: innerHTML was used due to <span> tags
 
 const startQuizButton = document.createElement('button');
 startQuizButton.setAttribute('class', 'next-btn');
-startQuizButton.setAttribute('id', 'start-quiz-btn');
+startQuizButton.setAttribute('id', 'start-quiz-btn button');
 startQuizButton.innerText = 'Start Quiz';
 
 // During quiz DOM elements
@@ -40,23 +40,23 @@ currentQuestion.setAttribute('class', 'text');
 currentQuestion.setAttribute('id', 'question');
 
 const nextButton = document.createElement('button');
-nextButton.setAttribute('class', 'next-btn');
+nextButton.setAttribute('class', 'next-btn button');
 nextButton.setAttribute('id', 'next-btn');
 
 const answerOne = document.createElement('button');
-answerOne.setAttribute('class', 'answer-btn');
+answerOne.setAttribute('class', 'answer-btn button');
 answerOne.setAttribute('id', 'answer-one');
 
 const answerTwo = document.createElement('button');
-answerTwo.setAttribute('class', 'answer-btn');
+answerTwo.setAttribute('class', 'answer-btn button');
 answerTwo.setAttribute('id', 'answer-two');
 
 const answerThree = document.createElement('button');
-answerThree.setAttribute('class', 'answer-btn');
+answerThree.setAttribute('class', 'answer-btn button');
 answerThree.setAttribute('id', 'answer-three');
 
 const answerFour = document.createElement('button');
-answerFour.setAttribute('class', 'answer-btn');
+answerFour.setAttribute('class', 'answer-btn button');
 answerFour.setAttribute('id', 'answer-four');
 
 const answerResult = document.createElement('h3');
@@ -76,11 +76,19 @@ userNameInput.setAttribute('class', 'name-input');
 userNameInput.setAttribute('id', 'name-input');
 userNameInput.setAttribute('placeholder', 'User Name');
 userNameInput.setAttribute('required', 'true');
+userNameInput.setAttribute('maxlength', '8');
 
 const submitScoreButton = document.createElement('button');
-submitScoreButton.setAttribute('class', 'next-btn');
+submitScoreButton.setAttribute('class', 'next-btn button');
 submitScoreButton.setAttribute('id', 'submit-btn');
 submitScoreButton.innerText = 'Submit Score';
+
+const warning = document.createElement('p');
+warning.setAttribute('class', 'warning');
+warning.setAttribute('id', 'warning');
+warning.innerText = `
+Warning: this quiz is designed to test your knowledge and compare scores against other students. If you wish compare scores against yourself, please annotate your submitted username with a number. Duplicate username submissions will result in the previous score being overwritten!
+`;
 
 // High Scores DOM elements
 const highScoresContainer = document.createElement('div');
@@ -91,25 +99,11 @@ highScoresHeading.setAttribute('class', 'high-scores-heading');
 highScoresHeading.setAttribute('id', 'high-scores-heading');
 highScoresHeading.innerText = 'High Scores';
 
-const userNameHeading = document.createElement('h3');
-userNameHeading.setAttribute('class', 'high-scores-sub-heading');
-userNameHeading.setAttribute('id', 'high-scores-name');
-userNameHeading.innerText = 'User Name';
+const loadedData = document.createElement('div');
+loadedData.setAttribute('class', 'high-scores-output');
+loadedData.setAttribute('id', 'output-container');
 
-const userScoreHeading = document.createElement('h3');
-userScoreHeading.setAttribute('class', 'high-scores-sub-heading');
-userScoreHeading.setAttribute('id', 'high-scores-result');
-userScoreHeading.innerText = 'User Score';
-
-const userNameOutput = document.createElement('h3');
-userNameOutput.setAttribute('class', 'high-scores-output');
-userNameOutput.setAttribute('id', 'user-name-output');
-
-const userScoreOutput = document.createElement('h3');
-userScoreOutput.setAttribute('class', 'high-scores-output');
-userScoreOutput.setAttribute('id', 'high-score-output');
-
-//// Footer DOM Elements ////
+//////// Footer DOM Elements ////////
 
 const footerContainer = document.getElementById('footer-container');
 
@@ -123,17 +117,16 @@ tryAgain.setAttribute('class', 'internal-link');
 tryAgain.setAttribute('id', 'try-again');
 tryAgain.innerText = 'Try Again';
 
-//// Functions that append the DOM ////
+//////// Functions that append the DOM ////////
 
+// Info page that explains the rules of the quiz
 const preQuiz = () => {
-    resetGlobals();
     emoji.src = salute;
 
     // Clears the DOM 
     main.querySelectorAll('*').forEach(e => e.remove());
     tryAgain.remove();
-    userNameOutput.innerText = '';
-    userScoreOutput.innerText = '';
+    loadedData.innerText = '';
 
     // Appends created DOM elements
     main.append(infoContainer);
@@ -146,6 +139,7 @@ const preQuiz = () => {
     viewScores.addEventListener('click', highScores);
 };
 
+// Quiz page that displays questions and answers
 const duringQuiz = () => {
     // Clears the DOM
     main.querySelectorAll('*').forEach(e => e.remove());
@@ -176,6 +170,7 @@ const duringQuiz = () => {
     startQuiz();   
 };
 
+// Page that displays the final score the user received 
 const postQuiz = () => {
     timesUp = true;
     finalScore = score + timer;
@@ -190,7 +185,8 @@ const postQuiz = () => {
     answerThree.removeEventListener('click', answerThreeClicked);
     answerFour.removeEventListener('click', answerFourClicked);
 
-    // Emoji image source
+    /* Changes emoji image source based on the user's
+    final result */
     if (finalScore >= 80) {
         emoji.src = happy;
     } else if (finalScore < 80) {
@@ -202,39 +198,41 @@ const postQuiz = () => {
     finalResultContainer.append(resultsParagraph);
     finalResultContainer.append(userNameInput);
     finalResultContainer.append(submitScoreButton);
+    finalResultContainer.append(warning);
     
     resultsParagraph.innerHTML = `
     You answered <span class="colored-text"> ${score / 10} </span> out of 10 questions correctly. 
     With <span class="colored-text"> ${timer} </span> seconds left on the clock, your final score is:
     <span class="colored-text"> ${finalScore} </span>!
-    `;
+    `; //note: innerHTML was used due to <span> tags
 
     // Adds event listener to button
-    submitScoreButton.addEventListener('click', pushNewScore);
+    submitScoreButton.addEventListener('click', saveNewScore);
 };
 
+// High scores page that displays the results of previous quiz takers
 const highScores = () => {
     // Clears the DOM
     main.querySelectorAll('*').forEach(e => e.remove());
     viewScores.remove();
 
     // Removes event listeners from memory
-    submitScoreButton.removeEventListener('click', pushNewScore);
+    submitScoreButton.removeEventListener('click', saveNewScore);
     viewScores.removeEventListener('click', highScores);
 
     // Appends created DOM elements
     main.append(highScoresContainer);
     highScoresContainer.append(highScoresHeading);
-    highScoresContainer.append(userNameHeading);
-    highScoresContainer.append(userScoreHeading);
-    highScoresContainer.append(userNameOutput);
-    highScoresContainer.append(userScoreOutput);
+    highScoresContainer.append(loadedData);
     footerContainer.append(tryAgain);
 
     // Adds event listener to link
     tryAgain.addEventListener('click', refresh);
 
+    // Loads and displays previous results from local storage
     loadScores();
 }
 
+/* Loads the quiz info page by default when
+ site is refreshed/first loaded */
 preQuiz();

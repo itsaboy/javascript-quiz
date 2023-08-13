@@ -8,8 +8,9 @@
 
     --largest-txt: clamp(1rem, 3vw + 1rem, 5rem);
     --large-txt: clamp(1rem, 2.5vw + 1rem, 2rem);
-    --normal-txt: clamp(0.8rem, 1.75vw + 1rem, 1.5rem);
-    --small-txt: clamp(0.75rem, 0.5vh + 1rem, 2rem);
+    --normal-txt: clamp(0.8rem, 1.75vw + 1rem, 1.75rem);
+    --small-txt: clamp(0.75rem, 0.5vh + 1rem, 1.5rem);
+    --smallest-txt: clamp(0.5rem, 0.35vh + 1rem, 1rem);
 
     /* Background Colors */
 
@@ -21,6 +22,7 @@
     --main-txt-color: rgb(250, 250, 250);
     --second-txt-color: rgb(37, 37, 59);
     --colored-txt-color: rgb(252, 234, 43);
+    --black-txt-color: rgb(10, 10, 10);
 
     /* Box Shadow */
 

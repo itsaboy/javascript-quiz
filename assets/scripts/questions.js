@@ -90,7 +90,7 @@ const answerTwoClicked = () => {
     };
 };
 
-// See above comments
+// See above comment
 const answerThreeClicked = () => {
     const answer = "C";
 
@@ -103,7 +103,7 @@ const answerThreeClicked = () => {
     };
 };
 
-// See above comments
+// See above comment
 const answerFourClicked = () => {
     const answer = "D";
 
@@ -159,7 +159,7 @@ const questionTwo = () => {
     nextButton.style.visibility = "hidden";
 };
 
-// See above comments
+// See above comment
 const questionThree = () => {
     activeQuestion = "Question Three";
 
@@ -177,7 +177,7 @@ const questionThree = () => {
     nextButton.style.visibility = "hidden";
 };
 
-// See above comments
+// See above comment
 const questionFour = () => {
     activeQuestion = "Question Four";
 
@@ -195,7 +195,7 @@ const questionFour = () => {
     nextButton.style.visibility = "hidden";
 };
 
-// See above comments
+// See above comment
 const questionFive = () => {
     activeQuestion = "Question Five";
 
@@ -213,7 +213,7 @@ const questionFive = () => {
     nextButton.style.visibility = "hidden";
 };
 
-// See above comments
+// See above comment
 const questionSix = () => {
     activeQuestion = "Question Six";
 
@@ -231,7 +231,7 @@ const questionSix = () => {
     nextButton.style.visibility = "hidden";
 };
 
-// See above comments
+// See above comment
 const questionSeven = () => {
     activeQuestion = "Question Seven";
 
@@ -249,7 +249,7 @@ const questionSeven = () => {
     nextButton.style.visibility = "hidden";
 };
 
-// See above comments
+// See above comment
 const questionEight = () => {
     activeQuestion = "Question Eight";
 
@@ -267,7 +267,7 @@ const questionEight = () => {
     nextButton.style.visibility = "hidden";
 };
 
-// See above comments
+// See above comment
 const questionNine = () => {
     activeQuestion = "Question Nine";
 
@@ -285,7 +285,7 @@ const questionNine = () => {
     nextButton.style.visibility = "hidden";
 };
 
-// See above comments
+// See above comment
 const questionTen = () => {
     activeQuestion = "Question Ten";
 
@@ -333,7 +333,8 @@ const nextQuestion = () => {
         questionNine();
     } else if (activeQuestion === "Question Nine") {
         questionTen();
-    // Takes user to final result screen when quiz is finished
+    /* Takes user to results screen when all questions
+    have been answered */
     } else if (activeQuestion === "Question Ten") {
         paused = true;
         postQuiz();

@@ -1,0 +1,32 @@
+/* ==========================================================================
+   Pseudo-classes
+========================================================================== */
+
+/* Buttons
+========================================================================== */
+
+/* Hover */
+
+.button:hover {
+    cursor: pointer;
+}
+
+.next-btn:hover {
+    background-color: var(--second-bg-color);
+    color: var(--second-txt-color);
+}
+
+.answer-btn:hover {
+    cursor: pointer;
+    background-color: var(--second-bg-color);
+}
+
+/* Internal Links
+========================================================================== */
+
+/* Hover */
+
+.internal-link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}

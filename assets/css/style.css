@@ -109,6 +109,15 @@ body {
    height: clamp( 50px, 25%, 150px);
 }
 
+/* Warning */
+
+.warning {
+   font-size: var(--smallest-txt);
+   font-weight: 600;
+   color: var(--black-txt-color);
+   
+}
+
 /* High Scores */
 
 .high-scores-heading {

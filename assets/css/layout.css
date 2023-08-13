@@ -165,7 +165,8 @@
     grid-template-areas:
     "final-result"
     "name-input"
-    "submit-btn";
+    "submit-btn"
+    "warning";
     grid-template-rows: 3fr repeat(2, 1fr);
     grid-template-columns: 1fr;
 }
@@ -184,16 +185,19 @@
     grid-area: submit-btn;
 }
 
+#warning {
+    grid-area: warning;
+}
+
 /* High Scores Grid Container
 ========================================================================== */
 
 .scores-container {
     grid-template-areas:
-    "high-scores-heading high-scores-heading"
-    "high-scores-name high-scores-result"
-    "user-name-output high-score-output";
-    grid-template-rows: 2fr 1fr 7fr;
-    grid-template-columns: repeat(2, 1fr);
+    "high-scores-heading"
+    "output-container";
+    grid-template-rows: 1fr 9fr;
+    grid-template-columns: 1fr;
 }
 
 /* High Scores Grid Item IDs */
@@ -202,22 +206,17 @@
     grid-area: high-scores-heading;
 }
 
-#high-scores-name {
-    grid-area: high-scores-name;
+#output-container {
+    grid-area: output-container;
 }
 
-#high-scores-result {
-    grid-area: high-scores-result;
-}
+/* High Scores output */
 
-#user-name-output {
-    grid-area: user-name-output;
+.high-scores-output {
     display: flex;
-}
-
-#high-score-output {
-    grid-area: high-score-output;
-    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 3rem;
 }
 
 /* ==========================================================================
