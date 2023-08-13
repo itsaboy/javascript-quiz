@@ -14,11 +14,12 @@
 .next-btn:hover {
     background-color: var(--second-bg-color);
     color: var(--second-txt-color);
+    border-right: solid var(--second-txt-color) 0.25rem;
+    border-bottom: solid var(--second-txt-color) 0.25rem; 
 }
 
 .answer-btn:hover {
-    cursor: pointer;
-    background-color: var(--second-bg-color);
+    background-color: var(--second-bg-color); 
 }
 
 /* Internal Links

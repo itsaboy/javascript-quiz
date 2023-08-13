@@ -27,7 +27,7 @@ This timed quiz will test your knowledge of fundamental Javascript concepts. You
 `; // note: innerHTML was used due to <span> tags
 
 const startQuizButton = document.createElement('button');
-startQuizButton.setAttribute('class', 'next-btn');
+startQuizButton.setAttribute('class', 'next-btn button');
 startQuizButton.setAttribute('id', 'start-quiz-btn button');
 startQuizButton.innerText = 'Start Quiz';
 
@@ -115,7 +115,7 @@ viewScores.innerText = 'View Scores';
 const tryAgain = document.createElement('a');
 tryAgain.setAttribute('class', 'internal-link');
 tryAgain.setAttribute('id', 'try-again');
-tryAgain.innerText = 'Try Again';
+tryAgain.innerText = 'Take Quiz';
 
 //////// Functions that append the DOM ////////
 

@@ -70,12 +70,15 @@ body {
 
 /* Answer Buttons */
 
+.button {
+   font-size: var(--normal-txt);
+}
+
 .answer-btn {
    width: 75%;
-   height: 75%;
-   font-size: var(--normal-txt);
-   border-right: solid var(--second-txt-color) 0.5rem;
-   border-bottom: solid var(--second-txt-color) 0.5rem;
+   height: 75%;   
+   border-right: solid var(--second-txt-color) 0.25rem;
+   border-bottom: solid var(--second-txt-color) 0.25rem;
    border-radius: 0.75rem;
    box-shadow: var(--shadow);
 }
@@ -85,7 +88,6 @@ body {
 .next-btn {
    width: clamp( 100px, 75%, 300px);
    height: clamp( 50px, 25%, 150px);
-   font-size: var(--normal-txt);
    border-right: solid var(--main-txt-color) 0.10rem;
    border-bottom: solid var(--main-txt-color) 0.10rem; 
    background-color: var(--second-txt-color);
