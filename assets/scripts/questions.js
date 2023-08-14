@@ -208,7 +208,7 @@ const questionFive = () => {
 
     correctAnswer = "A";
 
-    currentQuestion.innerText = "Which of the following operands checks for strict equality?";
+    currentQuestion.innerText = "Which of the following operators checks for strict equality?";
 
     answerOne.innerText = "==="; // correct answer
     answerTwo.innerText = "==";

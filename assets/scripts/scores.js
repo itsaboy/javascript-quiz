@@ -6,7 +6,7 @@ const saveNewScore = () => {
     const userScore = finalScore;
 
     // Sets userName to "none" if no input is entered
-    if (userNameInput.value !== "") {
+    if (userNameInput.value == "") {
         localStorage.setItem("none", userScore);
     } else {
         localStorage.setItem(userName, userScore);
