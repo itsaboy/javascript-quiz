@@ -2,12 +2,12 @@
 
 // Starts the quiz when the nextButton DOM element is clicked
 const startQuiz = () => {
-    timeLeft.innerText = '60';
+    timeLeft.innerText = "60";
 
     // Sets the interval for the countdown function (located in global.js)
     setInterval(countdown, 1000);
 
-    // Calls the nextQuestion function
+    // Starts the first question of the quiz
     nextQuestion();
 };
 
@@ -19,15 +19,18 @@ const rightAnswer = () => {
     their corresponding functions */ 
     correctAnswer = "none";
 
-    // Changes source of the emoji SVG based on the answer 
+    /* Changes source of the emoji SVG based on the answer 
+    and picks an animation to play */
     emoji.src = happy;
+    emoji.style.animationName = "nod";
+    emoji.style.animationDuration = "500ms";
 
     /* Shows the answerResult DOM element and adds text informing
     the user of whether the answer was correct or incorrect */
     answerResult.style.display = "block";
     answerResult.innerText = "Correct!";
 
-    // Adds 10 points to user's score and updates the DOM element
+    // Adds 10 points to user"s score and updates the DOM element
     score = score + 10;
     currentScore.innerText = `${score}`;
 
@@ -37,7 +40,7 @@ const rightAnswer = () => {
     /* Displays the nextButton DOM element so the user can go
     on to the next question */
     nextButton.style.visibility = "visible";
-    nextButton.innerText = "Next";
+    nextButton.innerText = "next";
 };
 
 // See above comments for everything here except timer and timeLeft
@@ -45,6 +48,8 @@ const wrongAnswer = () => {
     correctAnswer = "none";
 
     emoji.src = sad;
+    emoji.style.animationName = "shake";
+    emoji.style.animationDuration = "500ms";
 
     answerResult.style.display = "block";
     answerResult.innerText = "Incorrect...";
@@ -275,7 +280,7 @@ const questionNine = () => {
 
     correctAnswer = "C";
 
-    currentQuestion.innerText = "Which of the following is the equivalent to 'My name is ' + name + '!'?";
+    currentQuestion.innerText = "Which of the following is the equivalent to 'My name is " + name + "!'?";
 
     answerOne.innerText = "'My name is ' + name!";
     answerTwo.innerText = "'My' 'name' 'is' 'name!'";
@@ -305,8 +310,9 @@ const questionTen = () => {
 
 // Function that determines where the user is in the quiz
 const nextQuestion = () => {
-    // Changes source of the emoji SVG 
+    // Changes source of the emoji SVG and resets animation
     emoji.src = thinking;
+    resetAnimation();
 
     // Hides the answerResult DOM element
     answerResult.style.display = "none";

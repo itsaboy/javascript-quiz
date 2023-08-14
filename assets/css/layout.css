@@ -64,25 +64,6 @@
     grid-area: time;
 }
 
-/* Heading Flex Container
-========================================================================== */
-
-.heading-container {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 100%;
-}
-
-/* Results Flex Container
-========================================================================== */
-
-.results-container {
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-}
-
 /* ==========================================================================
    Main Grid Containers
 ========================================================================== */

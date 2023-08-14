@@ -14,7 +14,7 @@ If this variable is absent and the quiz ends because time expired,
 the countdown function will reload the <main> DOM elements indefinitely */
 let timesUp = false;
 
-// Countdown Timer
+// Countdown timer
 const countdown = () => {
     // Counts down if timer is not paused
     if (paused === false) {
@@ -28,10 +28,16 @@ const countdown = () => {
     if (timer <= 0 && timesUp === false) {
         paused = true;
         timer = 0;
-        timeLeft.innerText = "0";
+        timeLeft.innerText = timer;
         postQuiz();
     };
 };
+
+// Reset emoji animation
+const resetAnimation = () => {
+    emoji.style.animationName = "";
+    emoji.style.animationDuration = "";
+}
 
 // Refresh page to let user retry the quiz
 const refresh = () => {

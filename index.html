@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible">
         <title>Javascript Quiz</title>
-        <meta name="description" content="A timed quiz that tests the user's knowledge of fundamental Javascript concepts.">
+        <meta name="description" content="A timed quiz that tests the user"s knowledge of fundamental Javascript concepts.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./assets/css/reset.css">
         <link rel="stylesheet" href="./assets/css/layout.css">
@@ -17,27 +17,33 @@
         <script src="./assets/scripts/scores.js" defer></script>
         <script src="./assets/scripts/global.js" defer></script>
         <script src="./assets/scripts/dom.js" defer></script>
+        <script src="./assets/scripts/pages.js" defer></script>
         <script src="./assets/scripts/questions.js" defer></script>
     </head>
 
     <body>
+        <!--Grid container for body-->
         <div class="body-container">
+            <!--Header-->
             <header class="body-item" id="header">
+                <!--Grid container for header-->
                 <div class="header-container">
-                    <h1 class="heading" id="heading">The <img class="logo" src="./assets/icons/javascript.svg"> Quiz</h1>
-                    <img class="emoji" id="emoji" src="./assets/icons/emojis/salute.svg">
+                    <h1 class="heading" id="heading">The <img class="logo" src="./assets/icons/javascript.svg" alt="javascript logo"> Quiz</h1>
+                    <img class="emoji" id="emoji" src="./assets/icons/emojis/salute.svg" alt="emoji that changes based on the page displayed and whether questions were answered correctly or not">
                     <h2 class="quiz-output" id="score">Score: <span class="quiz-output-colored" id="score-output">0</span></h2>
                     <h2 class="quiz-output" id="time">Time: <span class="quiz-output-colored" id="time-output">0</span></h2>    
                 </div>
             </header>
-
+            <!--Main-->
             <main class="body-item" id="main">
-
+                <!--Content injected by pages.js and questions.js-->
             </main>
-
+            <!--Footer-->
             <footer class="body-item" id="footer">
+                <!--Footer grid container-->
                 <div class="footer-container" id="footer-container">
-                    <a id="documentation" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">Having Trouble?</a>
+                    <a class="external-link" id="documentation" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">Having Trouble?</a>
+                    <!--Content injected by pages.js-->
                 </div>
             </footer>
         </div>

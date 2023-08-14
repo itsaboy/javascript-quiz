@@ -45,5 +45,5 @@
 
 @font-face {
     font-family: Ubuntu;
-    src: url('../fonts/Ubuntu-Regular.ttf');
+    src: url("../fonts/Ubuntu-Regular.ttf");
 }

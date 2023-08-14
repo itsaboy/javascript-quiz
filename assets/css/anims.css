@@ -1,4 +1,34 @@
 /* ==========================================================================
+   Animations
+========================================================================== */
+
+/* Emoji */
+
+@keyframes nod {
+    25% {
+        transform: translateY(5px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes shake {
+    25% {
+        transform: translateX(3px);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    75% {
+        transform: translateX(-3px);
+    }
+}
+
+/* ==========================================================================
    Pseudo-classes
 ========================================================================== */
 
@@ -22,12 +52,18 @@
     background-color: var(--second-bg-color); 
 }
 
+/* Clicked */
+
+.button:active {
+    transform: translateY(5px);
+}
+
 /* Internal Links
 ========================================================================== */
 
 /* Hover */
 
-.internal-link:hover {
+.external-link:hover, .internal-link:hover {
     cursor: pointer;
     text-decoration: underline;
 }

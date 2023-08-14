@@ -30,13 +30,13 @@ body {
 }
 
 .logo {
-   height: clamp(50px, 4vh + 1rem, 750px);
+   height: clamp(50px, 5vh + 1rem, 400px);
 }
 
 /* Emoji */
 
 .emoji {
-   height: clamp(100px, 10vh + 1rem, 750px);
+   height: clamp(100px, 7.5vw + 1rem, 150px);
 }
 
 /* Score & Time Remaining */
