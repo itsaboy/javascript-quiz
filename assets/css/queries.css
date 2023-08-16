@@ -1,8 +1,8 @@
 /* ==========================================================================
-   Screen Width Below 1110px
+   Screen Width Below 1450px
 ========================================================================== */
 
-@media only screen and (max-width: 1220px) {
+@media only screen and (max-width: 1450px) {
 
     /* Header Grid Container */
 
@@ -12,6 +12,10 @@
         "score emoji time";
         grid-template-rows: repeat(2, 1fr);
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .header-container h1 {
+        font-size: var(--small-txt);
     }
 
 }

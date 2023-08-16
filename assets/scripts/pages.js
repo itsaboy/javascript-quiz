@@ -2,6 +2,7 @@
 
 // Info page that explains the rules of the quiz
 const preQuiz = () => {
+    // Changes emoji svg source
     emoji.src = salute;
 
     // Clears the DOM 
@@ -54,6 +55,7 @@ const duringQuiz = () => {
 // Page that displays the final score the user received 
 const postQuiz = () => {
     timesUp = true; // See comment (located in global.js) for details
+    // Calculates final score
     finalScore = score + timer;
     // Clears the DOM
     main.querySelectorAll("*").forEach(e => e.remove());
@@ -66,7 +68,7 @@ const postQuiz = () => {
     answerThree.removeEventListener("click", answerThreeClicked);
     answerFour.removeEventListener("click", answerFourClicked);
 
-    /* Changes emoji image source based on the user"s
+    /* Changes emoji SVG source based on the user"s
     final result */
     if (finalScore >= 80) {
         emoji.src = happy;
@@ -115,5 +117,5 @@ const highScores = () => {
 }
 
 /* Loads the quiz info page by default when
- site is refreshed/first loaded */
+ site is first loaded/refreshed */
 preQuiz();
