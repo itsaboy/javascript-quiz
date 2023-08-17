@@ -109,6 +109,9 @@ const highScores = () => {
     submitScoreButton.removeEventListener("click", saveNewScore);
     viewScores.removeEventListener("click", highScores);
 
+    // Changes emoji SVG source
+    emoji.src = salute;
+
     // Appends created DOM elements
     main.append(highScoresContainer);
     highScoresContainer.append(highScoresHeading);
