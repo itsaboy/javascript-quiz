@@ -23,7 +23,7 @@ const infoParagraph = document.createElement("p");
 infoParagraph.setAttribute("class", "text");
 infoParagraph.setAttribute("id", "info-paragraph");
 infoParagraph.innerHTML = `
-This timed quiz will test your knowledge of fundamental Javascript concepts. You have <span class="colored-text">60</span> seconds to answer up to <span class="colored-text">10</span> questions. Each correct answer will add <span class="colored-text">10</span> points to your score. An incorrect answer will subtract <span class="colored-text">10</span> seconds from your time remaining. When the quiz is finished, your time remaining will be added to your score for a <span class="colored-text">Final Result</span>!
+This timed quiz will test your knowledge of fundamental Javascript concepts. You have <span class="colored-text">60</span> seconds to answer up to <span class="colored-text">10</span> questions. Each correct answer will add <span class="colored-text">10</span> points to your score. An incorrect answer will subtract <span class="colored-text">10</span> seconds from your time remaining. If all questions are answered correctly, your time remaining will be added to your score for a <span class="colored-text">Final Result</span>!
 `; // note: innerHTML was used due to <span> tags
 
 const startQuizButton = document.createElement("button");

@@ -55,8 +55,14 @@ const duringQuiz = () => {
 // Page that displays the final score the user received 
 const postQuiz = () => {
     timesUp = true; // See comment (located in global.js) for details
+
     // Calculates final score
-    finalScore = score + timer;
+    if (score === 100) {
+        finalScore = score + timer;
+    } else {
+        finalScore = score;
+    };
+
     // Clears the DOM
     main.querySelectorAll("*").forEach(e => e.remove());
 

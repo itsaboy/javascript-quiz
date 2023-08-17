@@ -1,11 +1,23 @@
 // Global Variables //
 
-let timer = 60; // Time left on the countdown
-let score = 0; // Score based on answers to questions
-let paused = true; // Pauses/Restarts the countdown
-let activeQuestion = "none"; // Changes based on which question the user is answering
-let correctAnswer = "none"; // Changes based on which question the user is answering
-let finalScore = 0; // Determined by adding the score to time left in countdown
+// Time left on the countdown
+let timer = 60;
+
+// Score based on answers to questions
+let score = 0;
+
+// Pauses/Restarts the countdown
+let paused = true;
+
+// Changes based on which question the user is answering
+let activeQuestion = "none";
+
+// Changes based on which question the user is answering
+let correctAnswer = "none";
+
+/* Determined by adding the score to time left in countdown,
+executed in the postQuiz function (located in pages.js) */
+let finalScore = 0;
 
 /* This variable is necessary to prevent an issue where the
 user will not be able to input a name to save their score due
