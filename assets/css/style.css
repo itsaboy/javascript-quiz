@@ -76,7 +76,7 @@ body {
 
 .answer-btn {
    width: 75%;
-   height: 75%;   
+   height: 90%;   
    border-right: solid var(--second-txt-color) 0.25rem;
    border-bottom: solid var(--second-txt-color) 0.25rem;
    border-radius: 0.75rem;
