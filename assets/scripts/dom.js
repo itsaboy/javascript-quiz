@@ -75,6 +75,7 @@ const userNameInput = document.createElement("input");
 userNameInput.setAttribute("class", "name-input");
 userNameInput.setAttribute("id", "name-input");
 userNameInput.setAttribute("placeholder", "User Name");
+
 /* Because the input and submit button are not inside a form,
 this required attribute is set purely for the tooltip.
 See the comment inside the saveNewScore function
