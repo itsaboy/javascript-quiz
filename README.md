@@ -13,9 +13,11 @@ A timed ten-question quiz that tests the user's knowledge of fundamental Javasci
 https://github.com/itsaboy/javascript-quiz/assets/29829816/6ebb2666-5e6f-475f-a203-431b8dfb2e68
 
 ## Sources:
+### Custom Font
+[Google Fonts](https://fonts.google.com/specimen/Source+Code+Pro?category=Monospace)
 ### Emoji SVGs
 [OpenEmoji](https://openmoji.org/)
 ### Javascript Logo SVG
 [VectorLogoZone](https://www.vectorlogo.zone/)
 ### Note:
-The `main.querySelectorAll("*").forEach(e => e.remove());` line was copied from a personal project [here](https://github.com/itsaboy/void-warrior-SPA/blob/main/public/assets/scripts/main.js), lines 9, 125 & 223.
+The `main.querySelectorAll("*").forEach(e => e.remove());` lines were copied from a personal project [here](https://github.com/itsaboy/void-warrior-SPA/blob/main/public/assets/scripts/main.js), lines 9, 125 & 223.
